@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Programa {
 
 	public static void main(String[] args) {
-		String login, nome, email, segredo, segredo2;
+		String login, nome = null, email, segredo, segredo2; //pq aqui eu precisei cirar a variavel para o nome?
 		int user, opcao, selecao1;
 		char resposta;
 		Scanner ler = new Scanner(System.in);
@@ -53,15 +53,16 @@ public class Programa {
 				break;
 
 			case 2: {
+				System.out.println("Qual o seu nome?");
+				nome = ler.next();
 				System.out.println("Digite seu email: ");
-				login = ler.next();
+				email = ler.next();
 				System.out.println("Digite sua senha: ");
-				login = ler.next();
-				System.out.println();
+				segredo = ler.next();
 			}
 				break;
 			}
-			System.out.println("Seja bem vinda(o)");
+			System.out.println("Olá " + nome + " Bem vindo no LichesCampeões! \nEsse projeto consiste em te mostrar as campeãs ou campeões do xadrez mundial.");
 
 			// Inicio da estrutura.
 			ArrayList<Titulos> titulosFemininos = new ArrayList<Titulos>();
@@ -195,17 +196,154 @@ public class Programa {
 			titulosMasculinos.add(tituloMas2017);
 			titulosMasculinos.add(tituloMas2018);
 			titulosMasculinos.add(tituloMas2019);
+			
+			ArrayList<Titulos> titulosBrasileirosMasculinos = new ArrayList<Titulos>();
 
+			Titulos tituloBraMas2010 = new Titulos();
+			tituloBraMas2010.setNome("Giovanni Vescovi");
+			tituloBraMas2010.setIdade("32");
+			tituloBraMas2010.setRating(2606);
+			
+			Titulos tituloBraMas2011 = new Titulos();
+			tituloBraMas2011.setNome("Rafael Leitão");
+			tituloBraMas2011.setIdade("32");
+			tituloBraMas2011.setRating(2592);
+			
+			Titulos tituloBraMas2012 = new Titulos();
+			tituloBraMas2012.setNome("Krikor Mekhitarian");
+			tituloBraMas2012.setIdade("26");
+			tituloBraMas2012.setRating(2554);
+			
+			Titulos tituloBraMas2013 = new Titulos();
+			tituloBraMas2013.setNome("Rafael Leitão");
+			tituloBraMas2013.setIdade("34");
+			tituloBraMas2013.setRating(2592);
+			
+			Titulos tituloBraMas2014 = new Titulos();
+			tituloBraMas2014.setNome("Rafael Leitão");
+			tituloBraMas2014.setIdade("35");
+			tituloBraMas2014.setRating(2592);
+			
+			Titulos tituloBraMas2015 = new Titulos();
+			tituloBraMas2015.setNome("Krikor Mekhitarian");
+			tituloBraMas2015.setIdade("26");
+			tituloBraMas2015.setRating(2554);
+			
+			Titulos tituloBraMas2016 = new Titulos();
+			tituloBraMas2016.setNome("Everaldo Matsuura");
+			tituloBraMas2016.setIdade("46");
+			tituloBraMas2016.setRating(2451);
+			
+			Titulos tituloBraMas2017 = new Titulos();
+			tituloBraMas2017.setNome("Alexandr Fier");
+			tituloBraMas2017.setIdade("29");
+			tituloBraMas2017.setRating(2560);
+			
+			Titulos tituloBraMas2018 = new Titulos();
+			tituloBraMas2018.setNome("Roberto Junio Brito Molina");
+			tituloBraMas2018.setIdade("33");
+			tituloBraMas2018.setRating(2434);
+			
+			Titulos tituloBraMas2019 = new Titulos();
+			tituloBraMas2019.setNome("Alexandr Fier");
+			tituloBraMas2019.setIdade("31");
+			tituloBraMas2019.setRating(2560);
+			
+			Titulos tituloBraMas2020 = new Titulos();
+			tituloBraMas2020.setNome("Luis Paulo Supi");
+			tituloBraMas2020.setIdade("24");
+			tituloBraMas2020.setRating(2572);
+			
+			titulosBrasileirosMasculinos.add(tituloBraMas2010);
+			titulosBrasileirosMasculinos.add(tituloBraMas2011);
+			titulosBrasileirosMasculinos.add(tituloBraMas2012);
+			titulosBrasileirosMasculinos.add(tituloBraMas2013);
+			titulosBrasileirosMasculinos.add(tituloBraMas2014);
+			titulosBrasileirosMasculinos.add(tituloBraMas2015);
+			titulosBrasileirosMasculinos.add(tituloBraMas2016);
+			titulosBrasileirosMasculinos.add(tituloBraMas2017);
+			titulosBrasileirosMasculinos.add(tituloBraMas2018);
+			titulosBrasileirosMasculinos.add(tituloBraMas2019);
+			titulosBrasileirosMasculinos.add(tituloBraMas2020);
+			
+			ArrayList<Titulos> titulosBrasileirosFemininos = new ArrayList<Titulos>();
+			
+			Titulos tituloBraFem2010 = new Titulos();
+			tituloBraFem2010.setNome("Vanessa Feliciano");
+			tituloBraFem2010.setIdade("20");
+			tituloBraFem2010.setRating(2290);
+			
+			Titulos tituloBraFem2011 = new Titulos();
+			tituloBraFem2011.setNome("Artêmis Cruz");
+			tituloBraFem2011.setIdade("16");
+			tituloBraFem2011.setRating(0000);
+			
+			Titulos tituloBraFem2012 = new Titulos();
+			tituloBraFem2012.setNome("Juliana Terao");
+			tituloBraFem2012.setIdade("21");
+			tituloBraFem2012.setRating(2311);
+			
+			Titulos tituloBraFem2013 = new Titulos();
+			tituloBraFem2013.setNome("Vanessa Feliciano");
+			tituloBraFem2013.setIdade("23");
+			tituloBraFem2013.setRating(2290);
+			
+			Titulos tituloBraFem2014 = new Titulos();
+			tituloBraFem2014.setNome("Vanessa Feliciano");
+			tituloBraFem2014.setIdade("24");
+			tituloBraFem2014.setRating(2290);
+			
+			Titulos tituloBraFem2015 = new Titulos();
+			tituloBraFem2015.setNome("Juliana Terao");
+			tituloBraFem2015.setIdade("24");
+			tituloBraFem2015.setRating(2311);
+			
+			Titulos tituloBraFem2016 = new Titulos();
+			tituloBraFem2016.setNome("Juliana Terao");
+			tituloBraFem2016.setIdade("25");
+			tituloBraFem2016.setRating(2311);
+			
+			Titulos tituloBraFem2017 = new Titulos();
+			tituloBraFem2017.setNome("Juliana Terao");
+			tituloBraFem2017.setIdade("26");
+			tituloBraFem2017.setRating(2311);
+			
+			Titulos tituloBraFem2018 = new Titulos();
+			tituloBraFem2018.setNome("Juliana Terao");
+			tituloBraFem2018.setIdade("27");
+			tituloBraFem2018.setRating(2311);
+			
+			Titulos tituloBraFem2019 = new Titulos();
+			tituloBraFem2019.setNome("Juliana Terao");
+			tituloBraFem2019.setIdade("28");
+			tituloBraFem2019.setRating(2311);
+			
+			Titulos tituloBraFem2020 = new Titulos();
+			tituloBraFem2020.setNome("Julia Alboredo");
+			tituloBraFem2020.setIdade("27");
+			tituloBraFem2020.setRating(2217);
+			
+			titulosBrasileirosFemininos.add(tituloBraFem2010);
+			titulosBrasileirosFemininos.add(tituloBraFem2011);
+			titulosBrasileirosFemininos.add(tituloBraFem2012);
+			titulosBrasileirosFemininos.add(tituloBraFem2013);
+			titulosBrasileirosFemininos.add(tituloBraFem2014);
+			titulosBrasileirosFemininos.add(tituloBraFem2015);
+			titulosBrasileirosFemininos.add(tituloBraFem2016);
+			titulosBrasileirosFemininos.add(tituloBraFem2017);
+			titulosBrasileirosFemininos.add(tituloBraFem2018);
+			titulosBrasileirosFemininos.add(tituloBraFem2019);
+			titulosBrasileirosFemininos.add(tituloBraFem2020);
 			// Final da estrutura.
 
 			// Inicio do questionario
 			do {
 
-				System.out.println("Escolha a modalidade do titulo de xadrez:");
-				System.out.println("1- Feminino 2- masculino");
+				System.out.println("\nEscolha a modalidade do titulo de xadrez:");
+				System.out.println("1-Mundial Feminino \n2-Mundial masculino \n3-Brasileiro Masculino \n4-Brasileiro Feminino");
 				opcao = ler.nextInt();
 
-				if (opcao != 1 && opcao != 2) {
+				if (opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4 ) {
 					System.out.println("Opção invalida. Erro!");
 					System.exit(0);
 				}
@@ -307,6 +445,113 @@ public class Programa {
 						tituloEscolhido = titulosMasculinos.get(9);
 						mostrarTituloMas(tituloEscolhido);
 					}
+					
+				case 3: {
+					System.out.println("Escolha o ano: ");
+					System.out.println("1- 2010");
+					System.out.println("2- 2011");
+					System.out.println("3- 2012");
+					System.out.println("4- 2013");
+					System.out.println("5- 2014");
+					System.out.println("6- 2015");
+					System.out.println("7- 2016");
+					System.out.println("8- 2017");
+					System.out.println("9- 2018");
+					System.out.println("10- 2019");
+					System.out.println("11- 2020");
+				}
+				selecao1 = ler.nextInt();
+				if (selecao1 != 1 && selecao1 != 2 && selecao1 != 3 && selecao1 != 4 && selecao1 != 5
+						&& selecao1 != 6 && selecao1 != 7 && selecao1 != 8 && selecao1 != 9 && selecao1 != 10 && selecao1 != 11) {
+					System.out.println("Erro!");
+					System.exit(0);
+				}
+				if (selecao1 == 1) {
+					tituloEscolhido = titulosBrasileirosMasculinos.get(0);
+					mostrarTituloBrasileiroMasculino(tituloEscolhido);
+				} else if (selecao1 == 2) {
+					tituloEscolhido = titulosBrasileirosMasculinos.get(1);
+					mostrarTituloBrasileiroMasculino(tituloEscolhido);
+				} else if (selecao1 == 3) {
+					tituloEscolhido = titulosBrasileirosMasculinos.get(2);
+					mostrarTituloBrasileiroMasculino(tituloEscolhido);
+				} else if (selecao1 == 4) {
+					tituloEscolhido = titulosBrasileirosMasculinos.get(3);
+					mostrarTituloBrasileiroMasculino(tituloEscolhido);
+				} else if (selecao1 == 5) {
+					tituloEscolhido = titulosBrasileirosMasculinos.get(4);
+					mostrarTituloBrasileiroMasculino(tituloEscolhido);
+				} else if (selecao1 == 6) {
+					tituloEscolhido = titulosBrasileirosMasculinos.get(5);
+					mostrarTituloBrasileiroMasculino(tituloEscolhido);
+				} else if (selecao1 == 7) {
+					tituloEscolhido = titulosBrasileirosMasculinos.get(6);
+					mostrarTituloBrasileiroMasculino(tituloEscolhido);
+				} else if (selecao1 == 8) {
+					tituloEscolhido = titulosBrasileirosMasculinos.get(7);
+					mostrarTituloBrasileiroMasculino(tituloEscolhido);
+				} else if (selecao1 == 9) {
+					tituloEscolhido = titulosBrasileirosMasculinos.get(8);
+					mostrarTituloBrasileiroMasculino(tituloEscolhido);
+				} else if (selecao1 == 10) {
+					tituloEscolhido = titulosBrasileirosMasculinos.get(9);
+					mostrarTituloBrasileiroMasculino(tituloEscolhido);
+				}else if (selecao1 == 11) {
+					tituloEscolhido = titulosBrasileirosMasculinos.get(10);
+					mostrarTituloBrasileiroMasculino(tituloEscolhido);
+				}
+				case 4: 
+					System.out.println("Escolha o ano: ");
+					System.out.println("1- 2010");
+					System.out.println("2- 2011");
+					System.out.println("3- 2012");
+					System.out.println("4- 2013");
+					System.out.println("5- 2014");
+					System.out.println("6- 2015");
+					System.out.println("7- 2016");
+					System.out.println("8- 2017");
+					System.out.println("9- 2018");
+					System.out.println("10- 2019");
+					System.out.println("11- 2020");
+					selecao1 = ler.nextInt();
+					if (selecao1 != 1 && selecao1 != 2 && selecao1 != 3 && selecao1 != 4 && selecao1 != 5
+							&& selecao1 != 6 && selecao1 != 7 && selecao1 != 8 && selecao1 != 9 && selecao1 != 10 && selecao1 != 11) {
+						System.out.println("Erro!");
+						System.exit(0);
+					}if (selecao1 == 1) {
+						tituloEscolhido = titulosBrasileirosFemininos.get(0);
+						mostrarTituloBrasileiroMasculino(tituloEscolhido);
+					} else if (selecao1 == 2) {
+						tituloEscolhido = titulosBrasileirosFemininos.get(1);
+						mostrarTituloBrasileiroFeminino(tituloEscolhido);
+					} else if (selecao1 == 3) {
+						tituloEscolhido = titulosBrasileirosFemininos.get(2);
+						mostrarTituloBrasileiroFeminino(tituloEscolhido);
+					} else if (selecao1 == 4) {
+						tituloEscolhido = titulosBrasileirosFemininos.get(3);
+						mostrarTituloBrasileiroFeminino(tituloEscolhido);
+					} else if (selecao1 == 5) {
+						tituloEscolhido = titulosBrasileirosFemininos.get(4);
+						mostrarTituloBrasileiroFeminino(tituloEscolhido);
+					} else if (selecao1 == 6) {
+						tituloEscolhido = titulosBrasileirosFemininos.get(5);
+						mostrarTituloBrasileiroFeminino(tituloEscolhido);
+					} else if (selecao1 == 7) {
+						tituloEscolhido = titulosBrasileirosFemininos.get(6);
+						mostrarTituloBrasileiroFeminino(tituloEscolhido);
+					} else if (selecao1 == 8) {
+						tituloEscolhido = titulosBrasileirosFemininos.get(7);
+						mostrarTituloBrasileiroFeminino(tituloEscolhido);
+					} else if (selecao1 == 9) {
+						tituloEscolhido = titulosBrasileirosFemininos.get(8);
+						mostrarTituloBrasileiroFeminino(tituloEscolhido);
+					} else if (selecao1 == 10) {
+						tituloEscolhido = titulosBrasileirosFemininos.get(9);
+						mostrarTituloBrasileiroFeminino(tituloEscolhido);
+					}else if (selecao1 == 11) {
+						tituloEscolhido = titulosBrasileirosFemininos.get(10);
+						mostrarTituloBrasileiroFeminino(tituloEscolhido);
+					}
 				}
 				System.out.println("Deseja ver outro titulo? 'S' para sim e 'N' para ver outro titulo.");
 				resposta = ler.next().charAt(0);
@@ -329,5 +574,13 @@ public class Programa {
 	static void mostrarTituloFe(Titulos titulos) {
 		System.out.println("A campeã foi a: " + titulos.getNome() + "\n" + titulos.getIdade() + " anos de idade \n"
 						+ titulos.getPais() + " é país de nacionalidade \n" + titulos.getRating() + " de rating");
+	}
+	static void mostrarTituloBrasileiroMasculino(Titulos titulos) {
+		System.out.println("O campeão foi o: " + titulos.getNome() + "\n" + titulos.getIdade() + " anos de idade \n"
+						+ titulos.getRating() + " de rating");
+	}
+	static void mostrarTituloBrasileiroFeminino(Titulos titulos) {
+		System.out.println("A campeã foi a: " + titulos.getNome() + "\n" + titulos.getIdade() + " anos de idade \n"
+						+ titulos.getRating() + " de rating");
 	}
 }
